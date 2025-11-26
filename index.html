@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <title>DevCarlxs</title>
+
+    <style>
+        @import 'tailwindcss/base';
+        @import 'tailwindcss/components';
+        @import 'tailwindcss/utilities';
+
+        .dropdown-menu {
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s ease-in-out;
+            pointer-events: none;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .menu-link {
+            transition: all 0.3s ease;
+        }
+
+        .dropdown:hover .arrow {
+            transform: rotate(180deg);
+        }
+
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeInUp 1s ease-out;
+        }
+
+body {
+    background-image: url(https://i.gifer.com/6zjx.gif);
+    background-repeat: no-repeat;
+    background-size: cover;      
+    background-position: center;  
+}
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col text-gray-800">
+
+    <div class="overlay flex flex-col">
+
+       
+        <header class="bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex justify-between items-center h-16">
+                    <h1
+                        class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-purple-600 hover:to-blue-600 transition-all duration-300 cursor-pointer">
+                        DevCarlxs - Animes
+                    </h1>
+
+                    <nav class="flex space-x-8">
+                        <a href="#"
+                            class="text-lg menu-link text-gray-700 hover:text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50 transition-colors duration-200">
+                            Inicio
+                        </a>
+
+                       <div class="dropdown relative">
+                            <button
+                                class="text-lg menu-link flex items-center text-gray-700 hover:text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50 transition-colors duration-200">
+                                Gêneros
+                                <i class="ph ph-caret-down ml-2 arrow"></i>
+                            </button>
+
+                            <div
+                                class="dropdown-menu absolute left-0 mt-0 w-44 bg-white rounded-lg shadow-lg pb-2 border border-gray-100">
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Ação</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Magia</a>
+                                
+                            </div>
+                        </div>
+                        
+
+                        <div class="dropdown relative">
+                            <button
+                                class="text-lg menu-link flex items-center text-gray-700 hover:text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50 transition-colors duration-200">
+                                Lista de Animes
+                                <i class="ph ph-caret-down ml-2 arrow"></i>
+                            </button>
+
+                            <div
+                                class="dropdown-menu absolute left-0 mt-0 w-44 bg-white rounded-lg shadow-lg pb-2 border border-gray-100">
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Dublado</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Legendado</a>
+                                
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+
+<main class="flex-1 flex items-center justify-center py-16 px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+
+<div class="card bg-white backdrop-blur-sm shadow-lg rounded-2xl p-4 w-72 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+    <img src="https://m.media-amazon.com/images/S/pv-target-images/56801f96777465faab56175e117f765a14503c3e4d079fe80db1f0f617022783.jpg"
+        alt="Solo Leveling" class="rounded-lg w-full h-34 object-cover mb-4">
+    <h2 class="text-xl font-semibold text-gray-800 text-center mb-2">Solo Leveling</h2>
+    <p class="text-gray-700 text-sm text-center mb-4">Jinwoo Sung, o caçador mais fraco, descobre habilidades únicas que o tornam o caçador mais poderoso do mundo.</p>
+    <div class="flex justify-center">
+        <a href="#"
+           class="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300">
+           Assistir
+        </a>
+    </div>
+</div>
+
+
+<div class="card bg-white backdrop-blur-sm shadow-lg rounded-2xl p-4 w-72 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+    <img src="https://sitevolts.com/wp-content/uploads/2025/06/dan-da-dan-key-art-2.jpg"
+        alt="Dan Da Dan" class="rounded-lg w-full h-34 object-cover mb-4">
+    <h2 class="text-xl font-semibold text-gray-800 text-center mb-2">Dan Da Dan</h2>
+    <p class="text-gray-700 text-sm text-center mb-4">Uma história romântica repleta de mistérios e emoções entre jovens que buscam superar desafios do coração.</p>
+    <div class="flex justify-center">
+        <a href="#"
+           class="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300">
+           Assistir
+        </a>
+    </div>
+</div>
+
+
+<div class="card bg-white backdrop-blur-sm shadow-lg rounded-2xl p-4 w-72 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+    <img src="https://m.media-amazon.com/images/S/pv-target-images/b054f79f938837f13e1be59cb3d0cf4afcc4f4923ceae6fc192837b03fa726eb.jpg"
+        alt="Frieren" class="rounded-lg w-full h-34 object-cover mb-4">
+    <h2 class="text-xl font-semibold text-gray-800 text-center mb-2">Frieren: <br> Beyond Journey’s End</h2>
+    <p class="text-gray-700 text-sm text-center mb-4">A elfa maga Frieren reflete sobre a passagem do tempo e as memórias de sua jornada épica com heróis lendários.</p>
+    <div class="flex justify-center">
+        <a href="#"
+           class="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300">
+           Assistir
+        </a>
+    </div>
+</div>
+
+
+<div class="card bg-white backdrop-blur-sm shadow-lg rounded-2xl p-4 w-72 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+    <img src="https://m.media-amazon.com/images/S/pv-target-images/702dff130598b138f8a6e997218b91fc30f74d87368722f31cb1fd4d41e2a208.jpg"
+        alt="Demon Slayer" class="rounded-lg w-full h-34 object-cover mb-4">
+    <h2 class="text-xl font-semibold text-gray-800 text-center mb-2">Demon Slayer</h2>
+    <p class="text-gray-700 text-sm text-center mb-4">Tanjiro Kamado luta contra demônios em busca de vingança e para salvar sua irmã Nezuko, transformada em demônio.</p>
+    <div class="flex justify-center">
+        <a href="#"
+           class="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300">
+           Assistir
+        </a>
+    </div>
+</div>
+
+
+<div class="card bg-white backdrop-blur-sm shadow-lg rounded-2xl p-4 w-72 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+    <img src="https://m.media-amazon.com/images/S/pv-target-images/2ff7f59926c885de2daa11a18f29e8a3f75d7d01062b1721be818a8b8e971118.jpg"
+        alt="Boruto" class="rounded-lg w-full h-34 object-cover mb-4">
+    <h2 class="text-xl font-semibold text-gray-800 text-center mb-2">Boruto</h2>
+    <p class="text-gray-700 text-sm text-center mb-4">Boruto Uzumaki, filho de Naruto, enfrenta novos inimigos e desafios enquanto tenta deixar sua própria marca como ninja.</p>
+    <div class="flex justify-center">
+        <a href="#"
+           class="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300">
+           Assistir
+        </a>
+    </div>
+</div>
+
+
+<div class="card bg-white backdrop-blur-sm shadow-lg rounded-2xl p-4 w-72 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/7923a0407dbdba324c56acec9f096c13.jpg"
+        alt="Tokyo Revengers" class="rounded-lg w-full h-34 object-cover mb-4">
+    <h2 class="text-xl font-semibold text-gray-800 text-center mb-2">Tokyo Revengers</h2>
+    <p class="text-gray-700 text-sm text-center mb-4">Takemichi viaja no tempo para salvar sua ex-namorada e mudar o destino das gangues de Tóquio.</p>
+    <div class="flex justify-center">
+        <a href="#"
+           class="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300">
+           Assistir
+        </a>
+    </div>
+</div>
+
+
+    </div>
+</main>
+
+
+  <footer class="bg-white/90 backdrop-blur-md border-t border-gray-200 py-9 mt-auto">
+            <div class="max-w-7xl mx-auto text-center text-gray-600 text-xl">
+                © 2025 <span class="font-semibold text-blue-600">DevCarlxs</span>. Todos os direitos reservados.
+            </div>
+        </footer>
+
+</body>
+
+</html>
